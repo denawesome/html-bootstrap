@@ -1,2 +1,2 @@
 # html-bootstrap
-boilerplate: gulp, html, scss
+boilerplate: gulp(bs + sass + sourcemaps), html
