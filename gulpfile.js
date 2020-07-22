@@ -8,11 +8,11 @@ var browserSync = require('browser-sync').create();
 sass.compiler = require('node-sass');
 
 gulp.task('sass', function (done) {
-    return gulp.src('./sass/**/*.scss')
+    return gulp.src('./src/sass/**/*.scss')
         .pipe(sourcemaps.init())
         .pipe(sass().on('error', sass.logError))
         .pipe(sourcemaps.write('./maps'))
-        .pipe(gulp.dest('./css'))
+        .pipe(gulp.dest('./src/css'))
         .pipe(browserSync.stream({match: '**/*.css'}));
 
     done();
@@ -21,18 +21,17 @@ gulp.task('sass', function (done) {
 gulp.task('serve', gulp.series('sass', function(done) {
     browserSync.init({
         server: {
-            baseDir: './',
-            open: false
+            baseDir: './src/',
         },
         notify: false
     });
 
     browserSync.watch([
-        './*.html',
-        './scripts/*.js'
+        './src/*.html',
+        './src/scripts/*.js'
     ]).on('change', browserSync.reload);
 
-    gulp.watch('./sass/*.*', gulp.series('sass'));
+    gulp.watch('./src/sass/*.*', gulp.series('sass'));
   
     done()
 }));
