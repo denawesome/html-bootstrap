@@ -1,0 +1,27 @@
+{
+  "name": "html-bootstrap",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/denawesome/html-bootstrap.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/denawesome/html-bootstrap/issues"
+  },
+  "homepage": "https://github.com/denawesome/html-bootstrap#readme",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.10",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.1.0",
+    "node-sass": "^4.14.1",
+    "gulp-sourcemaps": "^2.6.5"
+  }
+}
